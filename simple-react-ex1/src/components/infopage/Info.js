@@ -20,8 +20,9 @@ class Info extends Component {
         <h1>TODO List</h1>
         <ListGroup>
           {this.props.items.map((item) => (
-            <ListGroupItem key={this.randomNumberInRange()}>
-              <Button color="danger" onClick={this.removeItemFromItems(item)}>Delete Item</Button> {item}
+            <ListGroupItem key={this.randomNumberInRange()} >
+              <Button color="success" onClick={()=>this.removeItemFromItems(item)}>Done</Button>
+              {item}
             </ListGroupItem>
           ))}
         </ListGroup>
