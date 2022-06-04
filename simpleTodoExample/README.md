@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+This is a simple react TODO app that you can add your to do list and delete them after you have done it.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The appearence of the app is as below: 
+![image](https://user-images.githubusercontent.com/73709610/172028631-bdaeba2e-5c4c-419a-abd1-41fb3abf404a.png)
 
-## Available Scripts
+### Add an Item Text Field && Add Item Button
 
-In the project directory, you can run:
+You can write your input here and then by clicking "Add Item" button you can add your new item to your TODO list. Duplicates are not allowed.
 
-### `npm start`
+### Done Button
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+By Clicking on "Done" button you can delete the same item from your list.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Details
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In this example app, basic reactstrap components like "Row, Col, Navbar, etc." are used. There are three main components : Navi, Info, and Page.
 
-### `npm run build`
+#### Navi
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In this section the simplest version of a navigation bar is implemented. The sections in the bar are non-functional and added only to display different sections in the bar.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Info
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Info component includes TODO list and delete button. The state are conveyed using react-redux.
 
-### `npm run eject`
+#### Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In this component the addition of a Todo item is implemented. The state is transfered using react-redux. The actionType ADD_NEW_ITEM_SUCCESS is used to add new item to the list.
