@@ -9,10 +9,9 @@ export default class Dashboard extends Component {
       <div>
         <Navi/>
         <Row>
-        <Col xs="3"><Info/></Col>
-        <Col xs="3"><Page/></Col>
-            
-
+          <Col xs="1"></Col>
+        <Col xs="5"><Info/></Col>
+        <Col xs="6"><Page/></Col>
         </Row>
       </div>
     )

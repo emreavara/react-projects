@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { useState } from "react";
 import { connect } from "react-redux";
 import { FormGroup, Label } from "reactstrap";
 import { Row, Col, Button } from "reactstrap";
@@ -8,14 +7,13 @@ import { bindActionCreators } from "redux";
 import * as itemActions from "../../redux/actions/itemActions";
 
 class Page extends Component {
-
-  state={
+  state = {
     itemName:"",
-  }
+  };
 
-  handleInput = event =>{
-    this.setState({itemName: event.target.value})
-  }
+  handleInputText = (event) => {
+    this.setState({ itemName: event.target.value });
+  };
 
   saveItem = () => {
     this.props.actions.addNewItemSuccess(this.state.itemName);
@@ -25,13 +23,18 @@ class Page extends Component {
     return (
       <div>
         <FormGroup>
-          <h3>Item Addition</h3>
+          <h3>Add New TODO Item</h3>
           <Row>
-            <Col>
-              <Label>Enter an item : </Label>
+            <Col xs="2">
+              <Label>Add an item : </Label>
             </Col>
-            <Col>
-              <input onChange={this.handleInput} placeholder="Enter an item name" id="title" type="text"></input>
+            <Col xs="3">
+              <input
+                onChange={this.handleInputText}
+                placeholder="Enter an item name"
+                id="title"
+                type="text"
+              ></input>
             </Col>
           </Row>
           <Button color="warning" onClick={this.saveItem}>
@@ -46,7 +49,10 @@ class Page extends Component {
 function mapDispatchToProps(dispatch) {
   return {
     actions: {
-      addNewItemSuccess: bindActionCreators(itemActions.addNewItemSuccess, dispatch),
+      addNewItemSuccess: bindActionCreators(
+        itemActions.addNewItemSuccess,
+        dispatch
+      ),
     },
   };
 }
